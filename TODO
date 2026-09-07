@@ -1,0 +1,65 @@
+
+[/] Create dataset loaders. 
+    [/] Two-Dimensional 
+    [/] Custom 
+    [/] Fetch OpenML
+    [/] Suites (OpenML CC-18 and CTR-23)
+
+[ ] Create experimentation scripts at core/experiments/
+    [ ] Prepare run_experiment.py 
+    [ ] tuned_ncvs.py
+    [ ] report_generator.py 
+    [ ] Finalize run_experiment.py
+
+[ ] Benchmark GaussianNB, KNN, LogisticRegression, and MLPClassifier
+    [ ] Iris 
+    [ ] Wine 
+    [ ] WDBC 
+    [ ] Sonar 
+    [ ] Ionosphere 
+    [ ] Glass 
+    [ ] Telco-Customer Churn 
+    [ ] Titanic 
+    [ ] Banknote 
+    [ ] Australian 
+    [ ] Haberman
+    [ ] Pima 
+
+[ ] Benchmark GaussianNB, KNN, LogisticRegression, and MLPClassifier
+    [ ] OpenML CC-18 
+    [ ] OpenML CTR-23
+
+[ ] Add fitness functions at core/utils/fitness
+    [ ] sphere.py 
+    [ ] rastrigin.py 
+    [ ] michalewicz.py 
+
+[ ] Add loss functions at core/utils/loss 
+    [ ] log_loss.py 
+    [ ] categorical_crossentropy.py 
+    [ ] mean_squared_error.py 
+
+[ ] Add solvers 
+    [ ] stochastic_hill_climbing.py 
+    [ ] simulated_annealing.py  
+    [ ] genetic_algorithm.py 
+    [ ] differential_evolution.py 
+    [ ] particle_swarm_optimization.py 
+    [ ] luus_jakola.py
+    [ ] spsa.py 
+    [ ] cmaes.py 
+
+[ ] Add topic_k code (NIM)
+    [ ] topick_state 
+        - configuration
+        - weights 
+        - train_visit_counts (train) 
+        - test_visit_counts (test)
+    [ ] topick_forward
+        - support different types of task 
+    [ ] topick_backward 
+        - support different types of task 
+
+[ ] Add Estimator class for topic_k code (scikit-learn) 
+    [ ] TopickClassifier 
+    [ ] TopickRegressor

@@ -1,0 +1,204 @@
+{
+  "DecisionTreeClassifier": {
+    "criterion": {
+      "type": "categorical",
+      "choices": [
+        "gini",
+        "entropy",
+        "log_loss"
+      ]
+    },
+    "max_depth": {
+      "type": "int",
+      "low": 2,
+      "high": 32,
+      "log": false
+    },
+    "min_samples_split": {
+      "type": "int",
+      "low": 2,
+      "high": 20
+    },
+    "min_samples_leaf": {
+      "type": "int",
+      "low": 1,
+      "high": 20
+    }
+  },
+  "RandomForestClassifier": {
+    "n_estimators": {
+      "type": "int",
+      "low": 10,
+      "high": 500,
+      "step": 10
+    },
+    "criterion": {
+      "type": "categorical",
+      "choices": [
+        "gini",
+        "entropy",
+        "log_loss"
+      ]
+    },
+    "max_depth": {
+      "type": "int",
+      "low": 2,
+      "high": 32,
+      "log": false
+    },
+    "min_samples_split": {
+      "type": "int",
+      "low": 2,
+      "high": 20
+    },
+    "min_samples_leaf": {
+      "type": "int",
+      "low": 1,
+      "high": 20
+    },
+    "max_features": {
+      "type": "categorical",
+      "choices": [
+        "sqrt",
+        "log2",
+        "none"
+      ]
+    }
+  },
+  "GaussianNB": {
+    "var_smoothing": {
+      "type": "float",
+      "low": 1e-11,
+      "high": 1e-07,
+      "log": true
+    }
+  },
+  "LogisticRegression": {
+    "C": {
+      "type": "float",
+      "low": 0.0001,
+      "high": 10000.0,
+      "log": true
+    },
+    "solver": {
+      "type": "categorical",
+      "choices": [
+        "lbfgs",
+        "liblinear",
+        "saga"
+      ]
+    },
+    "penalty": {
+      "type": "categorical",
+      "choices": [
+        "l1",
+        "l2",
+        "elasticnet"
+      ]
+    },
+    "max_iter": {
+      "type": "int",
+      "low": 100,
+      "high": 1000
+    }
+  },
+  "SVC": {
+    "C": {
+      "type": "float",
+      "low": 0.001,
+      "high": 1000.0,
+      "log": true
+    },
+    "kernel": {
+      "type": "categorical",
+      "choices": [
+        "linear",
+        "poly",
+        "rbf",
+        "sigmoid"
+      ]
+    },
+    "gamma": {
+      "type": "categorical",
+      "choices": [
+        "scale",
+        "auto"
+      ]
+    },
+    "degree": {
+      "type": "int",
+      "low": 2,
+      "high": 5
+    }
+  },
+  "KNeighborsClassifier": {
+    "n_neighbors": {
+      "type": "int",
+      "low": 1,
+      "high": 30
+    },
+    "weights": {
+      "type": "categorical",
+      "choices": [
+        "uniform",
+        "distance"
+      ]
+    },
+    "metric": {
+      "type": "categorical",
+      "choices": [
+        "euclidean",
+        "manhattan",
+        "minkowski"
+      ]
+    }
+  },
+  "MLPClassifier": {
+    "n_layers": {
+      "type": "int",
+      "low": 1,
+      "high": 3,
+      "children": [
+        "n_units_layer"
+      ]
+    },
+    "n_units_layer": {
+      "type": "int",
+      "low": 16,
+      "high": 128
+    },
+    "activation": {
+      "type": "categorical",
+      "choices": [
+        "tanh",
+        "relu",
+        "logistic"
+      ]
+    },
+    "solver": {
+      "type": "categorical",
+      "choices": [
+        "sgd",
+        "adam"
+      ]
+    },
+    "alpha": {
+      "type": "float",
+      "low": 1e-05,
+      "high": 0.1,
+      "log": true
+    },
+    "learning_rate": {
+      "type": "categorical",
+      "choices": [
+        "constant",
+        "adaptive"
+      ]
+    },
+    "max_iter": {
+      "type": "int",
+      "low": 100,
+      "high": 500
+    }
+  }
+}
